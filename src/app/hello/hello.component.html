@@ -1,0 +1,59 @@
+<!-- <h1>Xin chào tất cả mọi người</h1>
+<p>Đây là đoạn <strong>văn mẫu</strong> đầu tiên mà tôi muốn <mark style="background-color:DodgerBlue;">trình bày</mark></p>
+<div id = "Mylist">
+    <ol>
+        <li>Component</li>
+        <li>Goodbye</li>
+        <li>Hello</li>
+    </ol>
+</div>
+<style>
+    #Mylist {
+        color: redred;
+        text-align:left;
+        background-color: chartreuse;
+        padding: 10px;
+    }
+</style>
+
+<p>Tên là: {{user.name}}</p>
+<p>Tuổi là: {{user.age}}</p>
+
+<p>Loại rau: {{categories.vegetable}}</p>
+<p>Loại quả: {{categories.fruit}}</p>
+
+<input type="text" [value] = "user.name">
+<button type="button" (click)="handler()">Click me</button>
+<br><br>
+<div *ngIf="user.age >= 13; else under13"> Bạn lớn hơn 13 tuổi</div>
+<ng-template #under13>
+    <div>
+        Bạn dưới 13 tuổi
+    </div>
+</ng-template>
+<button (click)="user.age = user.age - 1">-</button>
+Age: {{user.age}}
+<button (click)="user.age = user.age + 1">+</button>
+
+<div *ngFor="let author of author">
+    {{author.id}} - {{author.authorname}} - {{author.authordate}}
+  </div>
+
+  <button (click)="isDanger = !isDanger">Toogle Danger</button>
+  <br>
+  <button (click)="isWarning = !isWarning">Toogle Warning</button>
+  <div class="box" [class.red-border]="isDanger" [class.yellow-background]="isWarning"></div>
+
+  <button (click)="isSpecial = !isSpecial" [style.color]="isSpecial ? 'red' : 'green' " [style.background-color]="isSpecial ? 'blue' : 'yellow'">
+    Somebutton
+    </button>
+<br>
+<h1>Hello {{lame}}</h1>
+<input type="text" [(ngModel)]="lame">
+<button (click)="IncreaseAge()">Tăng tuổi</button>
+| <button (click)="Descrease()">Giảm tuổi</button>
+<div>
+    <p>Tuổi ở đây là: {{ageservice}}</p>
+</div> -->
+
+<!-- Bắt đầu viết Web quản lý sinh viên ở đây -->

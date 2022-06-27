@@ -1,0 +1,80 @@
+<h1>Thêm mới sinh viên</h1>
+<form [formGroup]="StudentsForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="form-header" appearance="fill">
+        <mat-label>Mã sinh viên</mat-label>
+        <input id="code" type="text" formControlName="code" matInput placeholder="MSV-Number">
+        <span class="errorMessage" *ngIf="StudentsForm.controls.code.invalid">Cần phải nhập mã sinh viên</span>
+    </mat-form-field> <br>
+
+    <mat-form-field class="form-header" appearance="fill">
+        <mat-label>Giới tính</mat-label>
+        <input id="gender" type="text" formControlName="gender" matInput placeholder="Nam hoặc nữ">
+        <span class="errorMessage" *ngIf="StudentsForm.controls.gender.invalid">Cần phải nhập giới tính</span>
+    </mat-form-field> <br>
+
+    <mat-form-field class="form-header" appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input id="first-name" type="text" formControlName="firstName" matInput placeholder="Nguyễn Văn">
+        <span class="errorMessage" *ngIf="StudentsForm.controls.firstName.invalid">Cần phải nhập first name</span>
+    </mat-form-field> <br>
+
+    <mat-form-field class="form-header" appearance="fill">
+        <mat-label for="last-name">Last Name</mat-label>
+        <input id="last-name" type="text" formControlName="lastName" matInput placeholder="Duy">
+        <span class="errorMessage" *ngIf="StudentsForm.controls.lastName.invalid">Cần phải nhập last name</span>
+    </mat-form-field> <br>
+
+    <mat-form-field class="form-header" appearance="fill">
+        <mat-label for="dob">Dob</mat-label>
+        <input id="dob" type="text" formControlName="Dob" matInput placeholder="23/05/2000">
+        <!-- <span class="errorMessage" *ngIf="StudentsForm.controls.Dob.invalid">Cần phải nhập ngày sinh</span> -->
+    </mat-form-field> <br>
+
+
+    <mat-form-field class="form-header" appearance="fill">
+        <mat-label for="email">Email:</mat-label>
+        <input id="email" type="text" formControlName="Email" matInput placeholder="something@gmail.com">
+            <!-- <span class="errorMessage" *ngIf="StudentsForm.controls.Email.invalid">Cần phải nhập số đường</span> -->
+    </mat-form-field> <br>
+
+        <mat-form-field class="form-header" appearance="fill">
+            <mat-label for="phone">Phone:</mat-label>
+            <input id="phone" type="text" formControlName="phone" matInput placeholder="xxx-xxxx-xxx">
+            <!-- <span class="errorMessage" *ngIf="StudentsForm.controls.phone.invalid">Cần phải nhập thành phố</span> -->
+        </mat-form-field> <br> 
+        
+        <mat-form-field class="form-header" appearance="fill">
+            <mat-label for="picture">Picture:</mat-label>
+            <input id="picture" type="text" formControlName="picture" matInput placeholder="link của một ảnh">
+            <!-- <span class="errorMessage" *ngIf="StudentsForm.controls.picture.invalid">Cần phải nhập quốc gia</span> -->
+        </mat-form-field> <br> 
+    <button type="submit" [disabled]="!StudentsForm.valid">Submit</button>
+</form>
+
+
+
+<!-- <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label for="first-name">First Name: </label> <br>
+    <input id="first-name" type="text" formControlName="firstName"> <br>
+    <span class="errorMessage" *ngIf="profileForm.controls.firstName.invalid">Cần phải nhập first name</span>
+    <br>
+    <label for="last-name">Last Name: </label> <br>
+    <input id="last-name" type="text" formControlName="lastName"> <br>
+    <span class="errorMessage" *ngIf="profileForm.controls.lastName.invalid">Cần phải nhập last name</span> <br>
+    <label for="age">Age: </label><br>
+    <input id="age" type="number" formControlName="Age"> <br>
+    <span class="errorMessage" *ngIf="profileForm.controls.Age.invalid">Cần phải nhập tuổi</span> 
+    <div formGroupName="address">
+        <h4>Address</h4>
+        <label for="street">Street: </label><br>
+        <input id="street" type="text" formControlName="street"> <br>
+        <span class="errorMessage" *ngIf="profileForm.controls.address.invalid"></span> <br>
+        <label for="city">City: </label><br>
+        <input id="city" type="text" formControlName="city"> <br>
+        <span class="errorMessage" *ngIf="profileForm.controls.address.invalid"></span><br>
+        <label for="state">State: </label><br>
+        <input id="state" type="text" formControlName="state"> <br>
+        <span class="errorMessage" *ngIf="profileForm.controls.address.invalid">Cần phải nhập đầy đủ thông tin</span> 
+    </div>
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form> -->

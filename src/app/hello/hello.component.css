@@ -1,0 +1,22 @@
+.box {
+    width: 100px;
+    height: 200px;
+    padding: 20px 40px;
+    margin: 10px;
+    border: 2px  solid black;
+}
+
+.red-border{
+    border: 2px solid red; 
+}
+.yellow-background{
+    background-color: yellow;
+}
+.progress-bar-container,
+    .progress {
+      height: 20px;
+    }
+
+ .progress-bar-container {
+         width: 100%;
+    }

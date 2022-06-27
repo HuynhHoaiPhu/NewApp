@@ -1,0 +1,39 @@
+<!-- <p>Test FormControl!</p>
+<label for="name">Name: </label> <br>
+<input id="name" type="text" [formControl]="name">
+<br>
+<label for="age">Age: </label> <br>
+<input id="age" type="text" [formControl]="age">
+
+<p>Name Value: {{name.value}}; Age Value: {{age.value}}</p>
+
+<button type = "button" (click)="UpdateName()" (click)="UpdateAge()">Update</button> -->
+<h3>Test FormGroup</h3>
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+    <label for="first-name">First Name: </label> <br>
+    <input id="first-name" type="text" formControlName="firstName"> <br>
+    <span class="errorMessage" *ngIf="profileForm.controls.firstName.invalid">Cần phải nhập first name</span>
+    <br>
+    <label for="last-name">Last Name: </label> <br>
+    <input id="last-name" type="text" formControlName="lastName"> <br>
+    <span class="errorMessage" *ngIf="profileForm.controls.lastName.invalid">Cần phải nhập last name</span> <br>
+    <label for="age">Age: </label><br>
+    <input id="age" type="number" formControlName="Age"> <br>
+    <span class="errorMessage" *ngIf="profileForm.controls.Age.invalid">Cần phải nhập tuổi</span> 
+    <div formGroupName="address">
+        <h4>Address</h4>
+        <label for="street">Street: </label><br>
+        <input id="street" type="text" formControlName="street"> <br>
+        <span class="errorMessage" *ngIf="profileForm.controls.address.invalid"></span> <br>
+        <label for="city">City: </label><br>
+        <input id="city" type="text" formControlName="city"> <br>
+        <span class="errorMessage" *ngIf="profileForm.controls.address.invalid"></span><br>
+        <label for="state">State: </label><br>
+        <input id="state" type="text" formControlName="state"> <br>
+        <span class="errorMessage" *ngIf="profileForm.controls.address.invalid">Cần phải nhập đầy đủ thông tin</span> 
+    </div>
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+
+

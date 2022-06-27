@@ -1,0 +1,64 @@
+{
+  "students": [
+    {
+    "id": 1,
+    "code": "MSV-01",
+    "gender": "male",
+    "firstName": "Huỳnh Hoài",
+    "lastName": "Phú",
+    "dob?": "20/03/2022",
+    "email": "caigido@gmail.com",
+    "phone": "02021515",
+    "picture?": ""
+    }
+  ],  
+  "posts": [
+      {
+        "id": 1,
+        "title": "json-server",
+        "author": "typicode"
+      },
+      {
+        "id": 2,
+        "title": "some-thing",
+        "author": "Phú"
+      },
+      {
+        "title": "testing",
+        "author": "new author",
+        "id": 3
+      },
+      {
+        "title": "testing",
+        "author": "new author",
+        "id": 4
+      },
+      {
+        "title": "testing",
+        "author": "new author",
+        "id": 5
+      },
+      {
+        "title": "testing",
+        "author": "new author",
+        "id": 6
+      },
+      {
+        "title": "testing",
+        "author": "new author",
+        "id": 7
+      }
+    ],
+    "comments": [
+      {
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+      }
+    ],
+    "profile": {
+      "name": "Huỳnh Hoài Phú",
+      "age": 20,
+      "gender": "male"
+    }
+  }
